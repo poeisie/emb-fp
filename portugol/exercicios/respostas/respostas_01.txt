@@ -1,0 +1,175 @@
+// questão 1
+
+programa
+{
+	
+	funcao inicio()
+	{
+		inteiro a, b, soma, subtracao, multiplicacao, divisao
+
+		a = x
+		b = y
+
+		soma = a+b
+		subtracao = a-b
+		multiplicacao = a*b
+		divisao = a/b
+
+		escreva("A soma desses números é: ", soma)
+		escreva("\nA subtração desses números é: ", subtracao)
+		escreva("\nA multiplicação desses números é: ", multiplicacao)
+		escreva("\nA divisão desses números é: ", divisao)
+	}
+}
+
+// questão 2
+
+programa
+{
+	
+	funcao inicio()
+	{
+		real dolares, fatorConversao
+
+		escreva("Insira a quantia em dólares: ")
+		leia(dolares)
+
+		fatorConversao = dolares * 5.87
+
+		escreva("O valor em reais é: ", fatorConversao)
+		
+	}
+}
+
+// questão 3
+
+programa
+{
+	
+	funcao inicio()
+	{
+		real a, b, c, media_aritmetica
+
+		escreva("Insira sua primeira nota: ")
+		leia(a)
+
+		escreva("Insira sua segunda nota: ")
+		leia(b)
+
+		escreva("Insira sua terceira nota: ")
+		leia(c)
+
+		media_aritmetica = (a+b+c)/3
+
+		escreva("Sua nota é: ", media_aritmetica)
+	}
+}
+
+// questão 4
+
+programa
+{
+	
+	funcao inicio()
+	{
+		inteiro idade
+		logico maiorDeIdade
+
+		escreva("Informe sua idade: ")
+		leia(idade)
+
+		maiorDeIdade = idade >= 18
+
+		escreva("Maior de idade: ", maiorDeIdade, "\n")
+		
+	}
+}
+
+// questão 5
+
+programa
+{
+	
+	funcao inicio()
+	{
+		real celsius, fatorConversao
+
+		celsius = x
+
+		fatorConversao = (celsius * 9/5) + 32
+
+		escreva("A temperatura em Fahrenheit é: ", fatorConversao)
+		
+	}
+}
+
+// questão 6
+
+programa
+{
+	
+	funcao inicio()
+	{
+		real kg, m, imc
+
+		escreva("Informe seu peso em kg: ")
+		leia(kg)
+
+		escreva("Informe sua altura em m: ")
+		leia(m)
+
+		imc = kg/(m*m)
+
+		escreva("Seu IMC é: ", imc)
+		
+	}
+}
+
+// questão 7
+
+programa
+{
+	
+	funcao inicio()
+	{
+		real salario_inicial, salario_final, bonus
+
+		escreva("Insira o valor do salário: ")
+		leia(salario_inicial)
+
+		bonus = salario_inicial * 0.1
+
+		salario_final = salario_inicial + bonus
+
+		escreva("O salário inicial é de: ", salario_inicial)
+		escreva("\nO salário final é de: ", salario_final)
+		escreva("\nO bônus foi de: ", bonus)
+		
+	}
+}
+
+// questão 8
+
+programa
+{
+	
+	funcao inicio()
+	{
+		real av1, ex_pratico, prova_pratica, proj_py, media_final
+
+		escreva("Insira a nota dos exercícios práticos (0-2): ")
+		leia(ex_pratico)
+
+		escreva("Insira a nota da prova prática (0-8): ")
+		leia(prova_pratica)
+
+		av1 = (ex_pratico + prova_pratica)/2
+
+		escreva("Insira a nota da segunda avaliação (0-10): ")
+		leia(proj_py)
+
+		media_final = (av1 + proj_py)/2
+		
+		escreva("Sua nota final é: ", media_final)
+	}
+}
