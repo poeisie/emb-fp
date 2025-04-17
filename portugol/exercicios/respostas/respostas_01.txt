@@ -173,3 +173,33 @@ programa
 		escreva("Sua nota final é: ", media_final)
 	}
 }
+
+// questão 9
+
+programa
+{
+	
+	funcao inicio()
+	{
+		real distancia_km, peso_kg, frete
+
+		escreva("Insira a distância da entrega em quilômetro (km): ")
+		leia(distancia_km)
+
+		escreva("Insira o peso da encomenda em quilogramas (kg): ")
+		leia(peso_kg)
+		
+		
+		se (distancia_km > 100) {
+		frete = 2 * distancia_km
+		} senao {
+		frete = 1.50 * distancia_km
+		}
+		
+		se (peso_kg > 10) {
+			frete = frete + 5
+		}
+
+		escreva("Custo do frete é de: R$", frete)
+	}
+}
