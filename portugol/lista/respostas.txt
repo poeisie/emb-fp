@@ -55,3 +55,35 @@ programa {
     escreva("\nA quantidade de grama sintética necessária, em metros quadrados, é de: ", qtd_grama)
   }
 }
+
+// questão 3 
+
+programa {
+  funcao inicio() {
+    
+    cadeia nome_aluno
+    real av1, av2, av3, media_final
+
+    escreva("Informe seu nome: ")
+    leia(nome_aluno)
+
+    escreva("Informe sua primeira nota: ")
+    leia(av1)
+
+    escreva("Informe sua segunda nota: ")
+    leia(av2)
+
+    escreva("Informe sua terceira nota: ")
+    leia(av3)
+
+    media_final = ((av1*2) + (av2*3) + (av3*5))/10
+
+    se (media_final <= 4.9) {
+      escreva("Aluno(a) ", nome_aluno, " está reprovado(a).")}
+    se (media_final >= 5 e media_final <= 6.9){
+      escreva("Aluno(a) ", nome_aluno, " está na final.") }
+    se (media_final >= 7) {
+      escreva("Aluno(a) ", nome_aluno, " está aprovado(a).")
+    }
+  }
+}
