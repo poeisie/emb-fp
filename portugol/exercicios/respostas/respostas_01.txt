@@ -203,3 +203,117 @@ programa
 		escreva("Custo do frete é de: R$", frete)
 	}
 }
+
+// questão 10
+
+programa
+{
+	
+	funcao inicio()
+	{
+		inteiro dias_atraso
+    real multa
+
+    escreva("Informe a quantidade de dias de atraso: ")
+    leia(dias_atraso)
+
+    se (dias_atraso <= 7) {
+      multa = dias_atraso * 0.5
+    } se (dias_atraso >= 8 e dias_atraso <=14) {
+      multa = dias_atraso * 1
+    } se (dias_atraso > 14) {
+      multa = dias_atraso * 2
+    }
+
+    escreva("O valor da sua multa é de: R$", multa)
+	}
+}
+
+// questão 11 
+
+programa {
+  funcao inicio() {
+
+    real temperatura
+    caracter verificador
+    
+    escreva("Escolha uma unidade de temperatura para realizar a conversão (k/c): ")
+    leia(verificador)
+    escreva("Informe uma temperatura: ")
+    leia(temperatura)
+
+    escolha (verificador) {
+      caso 'k': temperatura = temperatura + 273.15
+      pare
+    caso contrario: temperatura = temperatura - 273.15
+    }
+
+    escreva("O valor convertido da temperatura é de: ", temperatura)
+  }
+}
+
+// questão 12
+
+programa {
+  funcao inicio() {
+    
+    inteiro cont=0
+    caracter n
+
+    escreva("Você gosta de futebol? ")
+    leia(n)
+
+    enquanto (n == 'S' ou n == 's'){
+      leia(n)
+      cont=cont+1
+    } escreva("A quantidade de pessoas que gosta de futebol é: ", cont)
+  }
+}
+
+// questão 13
+
+programa {
+  funcao inicio() {
+    
+    real valor_compra=0, desconto, valor_total, valor_desconto
+    inteiro qtd_itens=0
+    caracter verificador
+
+    escreva("Informe o valor total da compra em reais: R$")
+    leia(valor_compra)
+
+    escreva("Informe a quantidade de itens adquiridos: ")
+    leia(qtd_itens)
+
+    escreva("Deseja adicionar mais produtos ao carrinho? (s/n): ")
+    leia(verificador)
+
+    enquanto (verificador == 's' ou verificador == 'S') {
+      escreva("Informe o valor total da compra em reais: R$")
+      leia(valor_compra)
+      valor_compra++
+
+      escreva("Informe a quantidade de itens adquiridos: ")
+      leia(qtd_itens)
+      qtd_itens++
+
+      escreva("Deseja adicionar mais produtos ao carrinho? (s/n): ")
+      leia(verificador)
+    }
+
+    valor_total = valor_compra * qtd_itens
+
+    se (qtd_itens <=5){
+    desconto = 0
+    se (qtd_itens >=6 e qtd_itens <=10)
+    desconto = 0.05
+    } senao {
+      desconto = 0.10
+    }
+
+    valor_desconto = valor_total - (valor_total * desconto)
+
+    escreva("O valor total da sua compra é de: R$", valor_desconto)
+
+  }
+}
