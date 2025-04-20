@@ -1,0 +1,29 @@
+// questão 1
+
+programa {
+  funcao inicio() {
+    
+    real valor_camisetas, valor_cartolinas, valor_canetas, valor_total, valor_professor
+    inteiro qtd_cartolinas, qtd_canetas
+
+    escreva("Qual o valor das camisetas? ")
+    leia(valor_camisetas)
+
+    escreva("Qual o valor unitário das cartolinas? ")
+    leia(valor_cartolinas)
+
+    escreva("Quantas cartolinas foram compradas? ")
+    leia(qtd_cartolinas)
+
+    escreva("Qual o valor unitário das canetas? ")
+    leia(valor_canetas)
+
+    escreva("Quantas canetas foram compradas? ")
+    leia(qtd_canetas)
+
+    valor_total = valor_camisetas + (valor_cartolinas * qtd_cartolinas) + (valor_canetas * qtd_canetas)
+    valor_professor = valor_total/ 5
+
+    escreva("O valor total da compra é de: ", valor_total, "\ne o valor que deverá ser pago por cada professor é de: ", valor_professor)
+  }
+}
