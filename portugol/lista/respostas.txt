@@ -87,3 +87,34 @@ programa {
     }
   }
 }
+
+// questão 4
+
+programa {
+  funcao inicio() {
+
+    real distancia_km, combustivel_l, consumo_medio
+
+    escreva("Informe a distância total percorrida em km: ")
+    leia(distancia_km)
+
+    escreva("Informe a quantidade de combustível gasto em litros: ")
+    leia(combustivel_l)
+
+    consumo_medio = distancia_km/combustivel_l
+    
+    escreva("Consumo médio de: ", consumo_medio, "\n")
+
+    se (consumo_medio < 4) {
+      escreva("Classificação do consumo: Muito ruim")
+    }se (consumo_medio >= 4 e consumo_medio <= 8) {
+      escreva("Classificação do consumo: Ruim")
+    }se (consumo_medio >= 8.1 e consumo_medio <= 12) {
+      escreva("Classificação do consumo: Regular")
+    }se (consumo_medio >= 12.1 e consumo_medio <= 14) {
+     escreva("Classificação do consumo: Bom") 
+    }se (consumo_medio > 14) {
+     escreva("Classificação do consumo: Excelente")
+    }
+  }
+}
