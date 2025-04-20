@@ -118,3 +118,25 @@ programa {
     }
   }
 }
+
+// questão 5
+
+programa {
+  funcao inicio() {
+    
+    real num_horas, pontos
+
+    escreva("Informe quantas horas de atividade física você teve no mês: ")
+    leia(num_horas)
+
+    se (num_horas < 10){
+      pontos = 2 * num_horas
+    } se (num_horas >=10 e num_horas <= 20){
+      pontos = 5 * num_horas
+    } se (num_horas > 20){
+      pontos = 10 * num_horas
+    }
+
+    escreva("Você obteve ", pontos, " pontos.")
+  }
+}
