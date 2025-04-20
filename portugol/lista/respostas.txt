@@ -27,3 +27,31 @@ programa {
     escreva("O valor total da compra é de: ", valor_total, "\ne o valor que deverá ser pago por cada professor é de: ", valor_professor)
   }
 }
+
+// questão 2
+
+programa {
+  funcao inicio() {
+    
+    real altura, largura, area_total
+    inteiro qtd_grama
+
+    escreva("Insira a largura do campo em metros: ")
+    leia(largura)
+
+    escreva("Insira o comprimento do campo em metros: ")
+    leia(altura)
+
+    area_total = largura * altura
+
+    se (area_total > 5)
+      qtd_grama = area_total/ 5
+      se (area_total % 5 !=0){
+        qtd_grama += 1
+      }
+
+    escreva("A área total do campo, em metros quadrados é de: ", area_total)
+
+    escreva("\nA quantidade de grama sintética necessária, em metros quadrados, é de: ", qtd_grama)
+  }
+}
