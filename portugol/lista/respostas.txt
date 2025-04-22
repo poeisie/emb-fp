@@ -140,3 +140,224 @@ programa {
     escreva("Você obteve ", pontos, " pontos.")
   }
 }
+
+// questão 6
+
+programa {
+  funcao inicio() {
+  	
+    real saque, deposito, saldo=0
+    inteiro verificador_operacao
+    caracter verificador
+
+    escreva("Deseja realizar uma operação bancária? (S/N): ")
+    leia(verificador)
+
+    enquanto (verificador == 'S' ou verificador == 's') {
+      escreva("Saldo atual: ", saldo, "\n")
+      escreva("Digite 1 para Saque ou 2 para Depósito: ")
+      leia(verificador_operacao)
+
+      escolha (verificador_operacao){
+        caso 1:
+        escreva("Informe um valor de saque: ")
+        leia(saque)
+
+        se (saque <= 0 ou saque > saldo) {
+          escreva("Operação inválida.\n")
+        } senao {
+          saldo = saldo - saque
+          escreva("Saque realizado com sucesso.\nSaldo atual: ", saldo, "\n")
+        } pare
+
+        caso 2:
+        escreva("Informe um valor de depósito: ")
+        leia(deposito)
+
+        se (deposito <=0) {
+          escreva("Operação inválida.\n")
+        } senao {
+          saldo = saldo + deposito
+          escreva("Depósito realizado com sucesso.\nSaldo atual: ", saldo, "\n")
+        } pare
+
+        caso contrario:
+        escreva("Operação inválida.\n")
+      }
+
+      escreva("Deseja realizar outra operação? (S/N): ")
+      leia(verificador)
+    }
+
+    escreva("Saldo final: ", saldo)
+    
+  }
+}
+
+// questão 7
+
+programa {
+  funcao inicio() {
+    
+    inteiro homens=0, mulherMaisVelha=0, somaIdades=0, mulheresMaisDe20=0, idade
+    caracter sexo
+
+    para (inteiro i = 1; i <= 5; i++){
+      escreva("Digite a idade da ", i, "° pessoa: ")
+      leia(idade)
+
+      escreva("Digite o sexo (M/F) da ", i, "° pessoa: ")
+      leia(sexo)
+
+      somaIdades = somaIdades + idade
+
+      se (sexo == 'm' ou sexo == 'M'){
+        homens = homens + 1
+      } senao se (sexo == 'F' ou sexo == 'f') {
+        se (idade > mulherMaisVelha) {
+          mulherMaisVelha = idade
+        } se (idade > 20) {
+          mulheresMaisDe20 = mulheresMaisDe20 + 1
+        }
+      }
+    }
+
+    escreva("\nHomens cadastrados: ", homens)
+    escreva("\nIdade da mulher mais velha: ", mulherMaisVelha)
+    escreva("\nA média de idade do grupo é ", somaIdades/5, " anos.")
+    escreva("\nHá ", mulheresMaisDe20, " mulheres com mais de 20 anos.")
+  }
+}
+
+// questão 8
+
+programa {
+  funcao inicio() {
+    
+    inteiro dias, qtd_garrafas, total_garrafas=0, media_producao, contador=1
+
+    escreva("Informe o número de dias: ")
+    leia(dias)
+
+    enquanto(contador <= dias) {
+    	escreva("Digite a quantidade de garrafas produzidas no dia ", contador, ": ")
+    	leia(qtd_garrafas)
+
+    	total_garrafas = total_garrafas + qtd_garrafas
+
+    	contador = contador + 1
+    }
+
+    media_producao = total_garrafas/dias
+    
+    escreva("Total de garrafas produzidas: ", total_garrafas)
+    escreva("\nSua média de produção por dia foi de ", media_producao, " garrafas.\n")
+
+    se (media_producao < 1000) {
+    	escreva("Produção baixa.")
+    } se (media_producao >= 1000 e media_producao <= 2000) {
+    	escreva("Produção satisfatória.")
+    } se (media_producao > 2000) {
+    	escreva("Produção excelente.")
+    }
+  }
+}
+
+// questão embutida no final da 8
+
+programa {
+  funcao inicio() {
+    
+    inteiro numero, fatorial, i
+    caracter resposta
+
+    faca {
+      escreva("Digite um número inteiro positivo: ")
+      leia(numero)
+
+      se (numero >= 0) {
+        fatorial = 1
+
+        para (i = 1; i <= numero; i++) {
+          fatorial = fatorial * i
+        }
+
+        escreva("O fatorial de ", numero, " é: ", fatorial)
+      } senao {
+        escreva("Número inválido.")
+      }
+
+      escreva("\nDeseja calcular outro fatorial? (S/N): ")
+      leia(resposta)
+
+    } enquanto (resposta == 'S' ou resposta == 's')
+  }
+}
+
+// questão 9
+
+programa {
+  funcao inicio() {
+    
+    real valorInicial, taxaJuros, valorAtual
+    inteiro anos, ano
+    caracter resposta
+
+    faca {
+      escreva("Informe o valor inicial do investimento: ")
+      leia(valorInicial)
+
+      escreva("Informe a taxa de juros anual (em %): ")
+      leia(taxaJuros)
+
+      escreva("Digite o número de anos para o investimento: ")
+      leia(anos)
+
+      valorAtual = valorInicial
+
+      escreva("\nProjeção do investimento:")
+
+      para (ano = 1; ano <= anos; ano++) {
+        valorAtual = valorAtual + (valorAtual * taxaJuros / 100)
+        escreva("\nApós ", ano, " ano(s): R$ ", valorAtual)
+      }
+
+      escreva("\nDeseja fazer outra simulação? (S/N): ")
+      leia(resposta)
+
+    } enquanto (resposta == 'S' ou resposta == 's')
+  }
+}
+
+// questão 10
+
+programa {
+  funcao inicio() {
+    
+    inteiro totalAlunos, presencas, alunosCertificados = 0, i
+    real porcentagem
+    cadeia nome, alunosComCertificado = ""
+
+    escreva("Informe o número total de alunos: ")
+    leia(totalAlunos)
+
+    para (i = 1; i <= totalAlunos; i++) {
+      escreva("\nInforme o nome do ", i, "° aluno: ")
+      leia(nome)
+
+      escreva("\nInforme o número de presenças (0 a 10) de ", nome, ": ")
+      leia(presencas)
+
+      se (presencas >= 6) {
+        alunosComCertificado = alunosComCertificado + "\n- " + nome
+        alunosCertificados = alunosCertificados + 1
+      }
+    }
+
+    escreva("\nAlunos com direito ao certificado:")
+    escreva(alunosComCertificado)
+
+    porcentagem = (alunosCertificados * 100.0) / totalAlunos
+    escreva("\nPorcentagem de alunos certificados: ", porcentagem, "%")
+  }
+}
